@@ -63,9 +63,11 @@ class Application(clingo.Application):
         string = 'solutionTimeWindow' + str(step)
         parts = []
         if step > 0:
+            # No need to pass any facts for the first shot
             parts.append(('subproblem', [Number(step)]))
             if step > 1:
                 parts.append((string, []))
+                # passing the solution as facts in variable "compressed_start_time"
                 prg.add(string, [], self.compressed_start_time)
         else:
             parts.append(('base', []))

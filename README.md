@@ -1,3 +1,3 @@
 # Multi-shot-solving-with-JSP
 
- ``python dlO.py encoding.lp instance.lp``
+tp run -->  ``python dlO.py encoding.lp instance.lp``
